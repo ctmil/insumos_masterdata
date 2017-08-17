@@ -5,7 +5,7 @@
     'version': '8.0.1',
     'category': 'Point Of Sale',
     'sequence': 1,
-    'summary': 'Nusking Odoo SAP SOAP',
+    'summary': 'Insumos ctes master data',
     'depends': [
         "base","sale"
     ],
