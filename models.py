@@ -16,5 +16,11 @@ class res_partner(models.Model):
         _inherit = 'res.partner'
 
 	fecha_ultima_compra = fields.Date('Fecha Ult Compra')
+	detalles = fields.Char('Detalles',index=True)
 	city_2 = fields.Char('Ciudad 2')
 	state_id_2 = fields.Many2one('res.country.state','Provincia 2')
+
+class product_product(models.Model):
+        _inherit = 'product.product'
+
+	detalles = fields.Char('Detalles',index=True)
