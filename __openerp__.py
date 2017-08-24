@@ -7,7 +7,7 @@
     'sequence': 1,
     'summary': 'Insumos ctes master data',
     'depends': [
-        "base","sale"
+        "base","sale","product"
     ],
     'data': [
         "in_view.xml",
