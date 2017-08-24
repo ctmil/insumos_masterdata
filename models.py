@@ -24,3 +24,4 @@ class product_product(models.Model):
         _inherit = 'product.product'
 
 	detalles = fields.Char('Detalles',index=True)
+	modelo = fields.Char('Modelo',index=True)
