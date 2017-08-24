@@ -40,11 +40,14 @@ class product_product(osv.osv):
 		new_args = []
 		if args:
 			for arg in args:
-				if arg[0] == 'name' and arg[1] == 'ilike':
-					new_args.append(['detalle','ilike',arg[2]])
-		args.append(new_args)		
+				if arg[0] == 'default_code' and arg[1] == '=':
+					new_args = ('detalles','ilike',arg[2])
+		if new_args != []:
+			if '|' not in args:
+				args.insert(0,'|')
+			args.append(new_args)		
         	if context.get('search_default_categ_id'):
 	        	args.append((('categ_id', 'child_of', context['search_default_categ_id'])))
-		import pdb;pdb.set_trace()
+		#import pdb;pdb.set_trace()
         	return super(product_product, self).search(cr, uid, args, offset=offset, limit=limit, order=order, context=context, count=count)
 
